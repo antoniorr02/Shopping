@@ -1,0 +1,34 @@
+MEMORY LEAK REPORT BY Valgrind 
+
+lun 17 may 2021 01:11:41 CEST
+
+
+==133812== Memcheck, a memory error detector
+==133812== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==133812== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==133812== Command: ./dist/Debug/GNU-Linux/shopping3a -input ./data/ECommerce30.dataset -events 30 -index-by Brand -report-by Brand
+==133812== 
+
+[originalES(Original read from dataset)] 30 12496342285160594010
+
+[filteredES(Events indexed)] 30 581570612384401859
+
+[hitsData(Report traffic)] 10 beautix( 4.00) grattol( 1.00) jas( 1.00) jessnail( 1.00) kapous( 2.00) kerasys( 1.00) masura( 2.00) runail(11.00) shary( 2.00) staleks( 5.00) 
+
+[amountData(Report amount)] 10 beautix(43.82) grattol( 6.27) jas(25.71) jessnail( 1.10) kapous( 4.51) kerasys( 1.87) masura( 3.46) runail(41.94) shary( 6.04) staleks(63.33) 
+==133812== 
+==133812== HEAP SUMMARY:
+==133812==     in use at exit: 256 bytes in 1 blocks
+==133812==   total heap usage: 24,080 allocs, 24,079 frees, 67,258,459 bytes allocated
+==133812== 
+==133812== LEAK SUMMARY:
+==133812==    definitely lost: 0 bytes in 0 blocks
+==133812==    indirectly lost: 0 bytes in 0 blocks
+==133812==      possibly lost: 0 bytes in 0 blocks
+==133812==    still reachable: 256 bytes in 1 blocks
+==133812==         suppressed: 0 bytes in 0 blocks
+==133812== Reachable blocks (those to which a pointer was found) are not shown.
+==133812== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==133812== 
+==133812== For lists of detected and suppressed errors, rerun with: -s
+==133812== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
